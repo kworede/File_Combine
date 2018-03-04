@@ -1,5 +1,5 @@
 ## Kirubel Worede
-## CSE 374 Homework 2
+## CSE 374 Homework 2_(Part 1)
 ## Problem 3
 ## 10/16/2015
 ## A bash script that takes 2 or more arguments, called f1, f2, ..., fn. 
