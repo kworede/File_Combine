@@ -1,1 +1,18 @@
+# Create a bash script called datedlinecount that works as follows:
 
+# If it is given fewer than two arguments, it prints an appropriate error and exits.
+# Assume all the arguments are filenames for text files; no need to check for this.
+# Append to the file indicated by the first argument the following information:
+# The time and date
+# One line for each of the second-through-last arguments, containing the number of lines in the file and then the name of the file
+# If there were three or more arguments (i.e., two or more files to be counted), one additional line with the total number of lines in all the files and then the word total.
+
+For example, executing: ./datedlinecount log foo bar; ./datedlinecount log foo*; cat log might produce something like:
+      Mon Oct 12 20:42:16 PDT 2015
+      4 foo
+      17 bar
+      21 total
+      Mon Oct 12 20:42:17 PDT 2015
+      4 foo
+      3 food
+      7 total
