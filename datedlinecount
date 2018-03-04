@@ -1,0 +1,38 @@
+## Kirubel Worede
+## CSE 374 Homework 2 (Part 2)
+## Problem 3
+## 10/16/2015
+
+#!/bin/bash
+
+if [ $# -lt 2 ]
+then
+	echo >&2 "Error: Not enough files"
+	exit 1
+elif [ $# -lt 3 ]
+then
+        TEMP=`echo $@ | cut -f2- -d \ ` 
+        date >> $1
+	LCT=`wc -l $2`
+	WCT=`echo $LCT | cut -f1 -d \ `
+        wc >> $1 -l $2
+	echo >> $1 $WCT total
+	exit 1
+	
+else
+	TEMP=`echo $@ | cut -f2- -d \ `
+	date >> $1
+	LINECT=0
+	for name in $TEMP
+	do
+		LCT=`wc -l $name`
+		LCT=`echo $LCT | cut -f1 -d \ `
+		LINECT=`expr $LINECT + $LCT`
+		wc >> $1 -l $name
+	done
+	if [ $# -gt 2 ]
+	then
+		echo >> $1 $LINECT total
+	fi
+	exit 0
+fi
