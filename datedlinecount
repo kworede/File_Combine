@@ -1,8 +1,9 @@
-  ## Kirubel Worede
+## Kirubel Worede
 ## CSE 374 Homework 2 (Part 2)
 ## Problem 3
 ## 10/16/2015
-  #!/bin/bash
+
+#!/bin/bash
 
 if [ $# -lt 2 ]
 then
